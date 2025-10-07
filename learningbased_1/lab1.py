@@ -39,7 +39,7 @@ print (ytrain[0])
 #model.add(keras.layers.Dense(10, activation='softmax'))
 #model.summary()
 
-## EXC 6-7
+# QUESTIONS 6-7
 model = keras.Sequential()
 model.add(keras.layers.Conv2D(filters=32, kernel_size=(3, 3), activation="relu", input_shape=(28, 28, 1)))
 model.add(keras.layers.Conv2D(filters=64, kernel_size=(3, 3),activation="relu"))
@@ -54,13 +54,13 @@ model.summary()
 #model.compile(loss='categorical_crossentropy',
 #optimizer=keras.optimizers.RMSprop(), metrics=['accuracy'])
 
-## EXC 6-7
+## QUESTIONS 6-7
 model.compile(loss='categorical_crossentropy', optimizer=keras.optimizers.Adadelta(learning_rate=float(1)), 
               metrics=['accuracy'])
          
 #history = model.fit(xtrain, ytrain, batch_size=128, epochs=12, verbose=1, validation_split=0.2)
 
-## EXC 6-7
+# QUESTIONS 6-7
 history = model.fit(xtrain, ytrain, batch_size=128, epochs=6, verbose=1, validation_split=0.2)
 
 # Plot the loss curves
