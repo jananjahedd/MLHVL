@@ -298,7 +298,7 @@ def evaluate_model(model, xtest, ytest):
         test set
     """
     loss, accuracy = model.evaluate(xtest, ytest, verbose=0)
-    print(f"Linear activation result: {loss} {accuracy}")
+    print(f"Model performance result: {loss} {accuracy}")
     return loss, accuracy
 
 
