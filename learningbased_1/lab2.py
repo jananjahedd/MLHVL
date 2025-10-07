@@ -105,21 +105,21 @@ def max_pooling(feature_map, pool_size=(2, 2)):
     return pooled_map
 
 
-def normalize_feature_map(feature_map):
+def normalise_feature_map(feature_map):
     """
-    A funtion to normalize feature map to have zero mean and unit standard
+    A funtion to normalise feature map to have zero mean and unit standard
     deviation
 
     Args:
         feature_map: Input feature map
 
     Returns:
-        Normalized feature map
+        Normalised feature map
     """
     mean = np.mean(feature_map)
     std = np.std(feature_map)
-    normalized_map = (feature_map - mean) / std
-    return normalized_map
+    normalised_map = (feature_map - mean) / std
+    return normalised_map
 
 
 def fully_connected_layer(feature_maps, weights):
@@ -211,9 +211,9 @@ if __name__ == "__main__":
     plt.title('After 2x2 Max Pooling')
     plt.show()
 
-    normalized = normalize_feature_map(pooled_result)
-    print(f"mean: {np.mean(normalized):.6f}")
-    print(f"std: {np.std(normalized):.6f}")
+    normalised = normalise_feature_map(pooled_result)
+    print(f"mean: {np.mean(normalised):.6f}")
+    print(f"std: {np.std(normalised):.6f}")
 
     input_size = pooled_result.size
     num_output_units = 10
