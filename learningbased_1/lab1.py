@@ -1,7 +1,7 @@
 """
 Authors: Diana Luna, Janan Jahed
 Filename: lab1.py
-Description: Functions to complete excercise 1 of Learning-based Lab Assignment #1 - Image recognition using deep networks.
+Description: Functions to complete exercise 1 of Learning-based Lab Assignment #1 - Image recognition using deep networks.
 """
 # ***************** I HAVE TO CLEAN CODE ***********************
 
