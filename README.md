@@ -13,6 +13,11 @@
 | `lab2.py` | Exercise 1 of Learning-Based Lab Assignment |
 | `challenge_based.py` | Challenge-Based Lab Assignment |
 
+### Requirements
+```
+pip install -r requirements.txt
+```
+
 ### How to run files
 
 - `lab1.py`
