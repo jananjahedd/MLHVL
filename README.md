@@ -24,7 +24,7 @@ python lab1.py
 #### `lab2.py`
 ```
 cd learningbased_1
-python lab1.py
+python lab2.py
 ```
 
 #### `challenge_based.py`
