@@ -138,60 +138,6 @@ def relu_activation(x_train, y_train, x_test, y_test):
     evaluate_model(model, xtest, ytest)
     # result of model evaluation is: 0.07321187853813171 0.9794999957084656
 
-    """
-    Function that applies rectified (relu) activation to the DCN model
-
-    Arguments:
-        x_train, y_train, x_test, y_test: test tuples loaded with MNIST data
-
-    Returns: Plots for loss and accuracy, plus print statements
-    """
-
-    # data preparation
-    # flatenning 3 spatial dimensions - reshape to 60000,28,28,1 and
-    # 10000,28,28,1
-    xtrain = np.reshape(x_train, (60000, 28, 28, 1))
-    xtest = np.reshape(x_test, (10000, 28, 28, 1))
-
-    print(xtrain.shape, xtest.shape)
-
-    # rescale values between 0 and 1 by dividing them by 255
-    xtrain = np.array(xtrain)/255
-    xtest = np.array(xtest)/255
-
-    # convert train and testset labels -> separate network units
-    ytrain = keras.utils.to_categorical(y_train, 10)
-    ytest = keras.utils.to_categorical(y_test, 10)
-    print(ytrain[0], ytest[0])
-
-    # model definition
-    # dcn - 32 filters into 64, 3x3 pixel filter
-    # specify rectified activation in the 1st hidden layer
-    model = keras.Sequential()
-    model.add(keras.layers.Conv2D(filters=32, kernel_size=(3, 3),
-                                  activation="relu", input_shape=(28, 28, 1)))
-    model.add(keras.layers.Conv2D(filters=64, kernel_size=(3, 3),
-                                  activation="relu"))
-    model.add(keras.layers.MaxPool2D(pool_size=(2, 2)))
-    model.add(keras.layers.Flatten())
-    model.add(keras.layers.Dense(128, activation="relu"))
-    model.add(keras.layers.Dense(10, activation="softmax"))
-    model.summary()
-
-    # compile model
-    model.compile(loss='categorical_crossentropy',
-                  optimizer=keras.optimizers.Adadelta(learning_rate=float(1)),
-                  metrics=['accuracy'])
-
-    # trainning and evaluation
-    # 12 epochs, random 20%, 128 image label pairs
-    history = model.fit(xtrain, ytrain, batch_size=128, epochs=6, verbose=1,
-                        validation_split=0.2)
-
-    plots(history)
-    evaluate_model(model, xtest, ytest)
-    # result of model evaluation is: 0.04101130738854408 0.9873999953269958
-
 def deep_conv_networks(x_train, y_train, x_test, y_test):
     """
     Function that applies the DCN model
