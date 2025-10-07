@@ -2,8 +2,8 @@
 
 ### Authors
 
-- Janan Jahed
-- Diana Luna
+- Janan Jahed - 2619938
+- Diana Luna - 9876847
 
 ### Key Files
 
