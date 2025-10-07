@@ -1,5 +1,4 @@
-# Lab Assignment 1 - MLHVL
-## Learning-Based & Challenged-Based
+# Lab Assignment 1 - Learning-Based & Challenged-Based
 
 ### Authors
 
