@@ -359,17 +359,17 @@ def evaluate_model(model, xtest, ytest):
 # main to call all functions
 if __name__ == "__main__":
     # in case you don't have MNIST DB
-    #download_mnist_local()
+    download_mnist_local()
     # obtain laoded data in test tuples
     x_train, y_train, x_test, y_test = mnist_train_test()
     # questions 1-3
-    #linear_activation(x_train, y_train, x_test, y_test)
+    linear_activation(x_train, y_train, x_test, y_test)
     print("\n---------------------------------------\n")
     # questions 4-5
-    #relu_activation(x_train, y_train, x_test, y_test)
+    relu_activation(x_train, y_train, x_test, y_test)
     print("\n---------------------------------------\n")
     # question 6
-    #deep_conv_networks(x_train, y_train, x_test, y_test)
+    deep_conv_networks(x_train, y_train, x_test, y_test)
     print("\n---------------------------------------\n")
     # question 7
     deep_conv_networks_dropout(x_train, y_train, x_test, y_test)
