@@ -15,19 +15,19 @@
 
 ### How to run files
 
-# `lab1.py`
+#### `lab1.py`
 ```
 cd learningbased_1
 python lab1.py
 ```
 
-# `lab2.py`
+#### `lab2.py`
 ```
 cd learningbased_1
 python lab1.py
 ```
 
-# `challenge_based.py`
+#### `challenge_based.py`
 ```
 cd challengebased_1
 python challenge_based.py
