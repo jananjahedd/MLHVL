@@ -10,7 +10,7 @@
 | File | Description |
 |------|-------------|
 | `lab1.py` | Exercise 1 of Learning-Based Lab Assignment |
-| `lab2.py` | Exercise 1 of Learning-Based Lab Assignment |
+| `lab2.py` | Exercise 2 of Learning-Based Lab Assignment |
 | `challenge_based.py` | Challenge-Based Lab Assignment |
 
 ### Requirements
